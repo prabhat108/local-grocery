@@ -1,0 +1,2135 @@
+<!doctype html>
+<html lang="">
+
+
+
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>KETRA MART Shopping Site</title>
+
+<meta name="description" content="KETRA MART online Shopping " />
+<meta name="keywords" content="Shopping, Fashion dress, ecommerce">
+<!-- CDN Links -->
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+<link rel="stylesheet" href="../../cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+<link rel="stylesheet" href="../../cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
+<link href="../../cdn.jsdelivr.net/npm/remixicon%402.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- CSS Links -->
+<link rel="stylesheet" href="../frontend/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="../frontend/assets/css/animate.min.css">
+<link rel="stylesheet" href="../frontend/assets/css/boxicons.min.css">
+<link rel="stylesheet" href="../frontend/assets/css/flaticon.css">
+<link rel="stylesheet" href="../frontend/assets/css/magnific-popup.min.css">
+<link rel="stylesheet" href="../frontend/assets/css/nice-select.min.css">
+<link rel="stylesheet" href="../frontend/assets/css/slick.min.css">
+<link rel="stylesheet" href="../frontend/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="../frontend/assets/css/meanmenu.min.css">
+<link rel="stylesheet" href="../frontend/assets/css/rangeSlider.min.css">
+<link rel="stylesheet" href="../frontend/assets/css/style.css">
+<link rel="stylesheet" href="../frontend/assets/css/responsive.css">
+
+
+<link rel="stylesheet" href="../frontend/assets/select2/css/select2.min.css">
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.0.0/nouislider.css"
+    integrity="sha512-de3hHhaaVjGo+KGk523A/Z0k6cgWD3mLLgucg6vSnrdUcDHVhUC2R6PSsgZR6LJ5NjcGPv3IoC1psoY+QILIgA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="../frontend/assets/sass/styles.css">
+<link rel="stylesheet" href="../frontend/assets/sass/additional.css">
+
+
+<link rel="icon" type="image/png" href="#">
+
+
+
+    <style>
+        .pagination-area .page-numbers.prev,.pagination-area .page-numbers.next{
+            margin-left:0;
+            margin-right:0;
+        }
+        .wishlist-btn{
+            right:92px;
+        }
+
+        /* smaller and bigger view*/
+        .shop_toolbar_btn > button {
+            margin-right: 10px;
+            border: 0;
+            background: inherit;
+        }
+        .shop_toolbar_btn > button.btn-grid-3 {
+            background: url(../frontend/assets/images/icons/bkg_grid.webp) no-repeat scroll center center;
+            width: 20px;
+            height: 20px;
+        }
+        .shop_toolbar_btn > button.btn-grid-3.active {
+            background: url(../frontend/assets/images/icons/bkg_grid_hover.webp) no-repeat scroll center center !important;
+        }
+        .shop_toolbar_btn > button.btn-grid-4 {
+            background: url(../frontend/assets/images/icons/bkg_grid4.webp) no-repeat scroll center center;
+            width: 26px;
+            height: 22px;
+        }
+        .shop_toolbar_btn > button.btn-grid-4.active {
+            background: url(../frontend/assets/images/icons/bkg_grid4_hover.webp) no-repeat scroll center center !important;
+        }
+        @media  only screen and (min-width: 992px) and (max-width: 1199px) {
+            .shop_toolbar_btn > button.btn-grid-4 {
+                display: none;
+            }
+        }
+        @media  only screen and (min-width: 768px) and (max-width: 991px) {
+            .shop_toolbar_btn > button.btn-grid-4 {
+                display: none;
+            }
+        }
+
+
+        ul.list{
+            height: 300px !important;
+            overflow-y: scroll !important;
+        }
+        .noUi-horizontal .noUi-handle {
+            width: 10px;
+            height: 32px;
+            top: -12px;
+        }
+
+        .noUi-handle {
+            background: #FF8082;
+            border-radius: 8px;
+            cursor: default;
+            box-shadow: none;
+            border: 0;
+        }
+
+        .noUi-target {
+            background: #FFF2F3;
+            border: none;
+        }
+
+        .noUi-handle:before,
+        .noUi-handle:after {
+            display: none;
+        }
+
+        .noUi-handle:after {
+            left: 17px;
+        }
+
+        .noUi-horizontal {
+            height: 10px;
+        }
+
+        html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+            right: -8px;
+            left: auto;
+        }
+
+        /*PRICE SLIDER UI*/
+        .price-box {
+            border: 1px solid #ddd;
+            padding: 5px 14px;
+            border-radius: 4px;
+        }
+
+        .aiz-range-slider .noUi-connect,
+        .aiz-range-slider-mobile .noUi-connect {
+            background: #FF8082;
+        }
+
+        .range-slider-value {
+            font-size: 16px !important;
+        }
+
+    /*  ATTRIBUTES UI  */
+        /*aiz megabox*/
+        .aiz-megabox {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .aiz-megabox input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            top: 8px;
+            left: 10px;
+        }
+
+        .aiz-megabox .aiz-megabox-elem {
+            border: 1px solid #e2e5ec;
+            border-radius: 50%;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            padding: 2px;
+        }
+
+        .aiz-megabox>input:checked~span .aiz-rounded-check:after,
+        .aiz-megabox>input:checked~span .aiz-square-check:after {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .aiz-megabox>input:checked~.aiz-megabox-elem,
+        .aiz-megabox>input:checked~.aiz-megabox-elem {
+            border-color: black;
+        }
+
+        .size-30px {
+            width: 30px;
+        }
+
+        .size-30px {
+            height: 30px;
+        }
+
+        /*checkbox attributes*/
+        .aiz-checkbox,
+        .aiz-mobile-checkbox {
+            display: block;
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .aiz-checkbox>input,
+        .aiz-radio>input,
+        .aiz-mobile-checkbox>input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .aiz-checkbox .aiz-square-check,
+        .aiz-mobile-checkbox .aiz-square-mobile-check {
+            position: absolute;
+            top: 0px;
+            left: 0;
+        }
+
+        .aiz-square-check,
+        .aiz-square-mobile-check {
+            border-radius: 3px;
+        }
+
+        .attribute_name {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .aiz-square-check,
+        .aiz-square-mobile-check {
+            background: 0 0;
+            position: relative;
+            height: 16px;
+            width: 16px;
+            padding: 10px;
+            border: 1px solid #d1d7e2;
+        }
+
+        .aiz-checkbox>input:checked~.aiz-square-check:after,
+        .aiz-radio>input:checked~.aiz-square-check:after,
+        .aiz-mobile-checkbox>input:checked~.aiz-square-mobile-check:after {
+            visibility: visible;
+            opacity: 1;
+
+        }
+
+        .aiz-checkbox>input:checked~.aiz-square-check,
+        .aiz-mobile-checkbox>input:checked~.aiz-square-mobile-check {
+            background: #FF7277 !important;
+            border: 0;
+        }
+
+    </style>
+
+
+<style>
+
+    .checkbox-alphanumeric::after,
+    .checkbox-alphanumeric::before {
+        content: '';
+        display: table;
+    }
+
+    .checkbox-alphanumeric::after {
+        clear: both;
+    }
+
+    .checkbox-alphanumeric input {
+        left: -9999px;
+        position: absolute;
+    }
+
+    .checkbox-alphanumeric label {
+        width: 2.25rem;
+        float: left;
+        padding: 6px 0;
+        margin-right: 0.375rem;
+        display: block;
+        color: #818a91;
+        font-size: 0.875rem;
+        font-weight: 400;
+        text-align: center;
+        /* background: transparent; */
+        text-transform: uppercase;
+        border: 1px solid #e6e6e6;
+        border-radius: 2px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        transform: scale(0.95);
+    }
+
+    .checkbox-alphanumeric-circle label {
+        border-radius: 100%;
+    }
+
+    .checkbox-alphanumeric label > img {
+        max-width: 100%;
+    }
+
+    .checkbox-alphanumeric label:hover {
+        cursor: pointer;
+        border-color: #FF5A60;
+    }
+
+    .checkbox-alphanumeric input:checked ~ label {
+        transform: scale(1.1);
+        background: #FF5A60 !important;
+        color: white;
+    }
+
+    .checkbox-alphanumeric--style-1 label {
+        width: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 4px;
+    }
+
+    .d-table.checkbox-alphanumeric--style-1 {
+        width: 100%;
+    }
+
+    .d-table.checkbox-alphanumeric--style-1 label {
+        width: 100%;
+    }
+
+
+
+    .aiz-megabox {
+        position: relative;
+        cursor: pointer;
+    }
+    .aiz-megabox input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    .aiz-megabox .aiz-megabox-elem {
+        border: 1px solid #e2e5ec;
+        border-radius:50% !important;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        padding: 2px;
+    }
+    .aiz-megabox > input:checked ~ span .aiz-rounded-check:after,
+    .aiz-megabox > input:checked ~ span .aiz-square-check:after {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .aiz-megabox > input:checked ~ .aiz-megabox-elem,
+    .aiz-megabox > input:checked ~ .aiz-megabox-elem {
+        border-color: var(--primary);
+    }
+    .size-30px {
+        height: 30px;
+    }
+    .size-30px {
+        width: 30px;
+    }
+    .color-rounded {
+        border-radius: 50%!important;
+        margin:0 !important;
+    }
+</style>
+
+
+    <style>
+        @media  screen and (max-width: 767.99px) {
+            #loading .loader{
+                left: 23% !important;
+                top: 32% !important;
+            }
+        }
+        .js-cookie-consent{
+            position: fixed;
+            bottom: 60px;
+            left: 20px;
+            right: 20px;
+            max-width: 310px;
+            z-index: 1070;
+            background: #55a2a6;
+            color: white;
+            padding: 14px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+
+        }
+        @media(max-width:530px){
+            .js-cookie-consent{
+                display:none;
+            }
+            .footer-area{
+                margin-bottom: 26px;
+            }
+            .banner-bottom-area{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                z-index: 99999;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="loading" style="display: none;">
+                <div class="loader" style="position: fixed;z-index: 9999; left: 40%;top: 37% ;width: 100%">
+                    <img width="200" src="../backend/assets/images/loader.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----====== Header Starts====== --->
+
+<div class="modal left fade mobileMenuModal show" id="mobileMenu" tabindex="-1" role="dialog" aria-modal="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close d-none" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="bx bx-x"></i></span>
+            </button>
+            <div class="modal-body">
+                <!-- Sign In or Sign Up -->
+                <div class="mobile-menu__signin d-flex align-items-center justify-content-between">
+                    
+                    <button class="btn btn-outline">
+                        <a href="../login.html" class="text-uppercase">
+                            Sign In
+                        </a>
+                    </button>
+                    <span>or</span>
+                    <button class="btn secondary-btn sign-up-btn">
+                        <a href="../register.html" class="text-white text-uppercase">
+                            Sign Up
+                        </a>
+                    </button>
+                    
+                </div>
+
+
+                <!-- Navigation Menu -->
+                <div class="mobile-navigation-menu mt-5">
+                    <ul>
+                        <li>
+                            <a href="../index.html" class="navigation-item">
+                                <img src="../frontend/assets/images/icons/home.svg">
+                                <span> Home </span>
+                            </a>
+                        </li>
+                                                                                                            <li>
+                                    <a href="../category/shoes.html" class="navigation-item"
+
+                                                                           >
+
+                                        <img src="../index.html">
+                                        <span> Shoes </span>
+                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a href="../category/accessories.html" class="navigation-item"
+
+                                                                              data-toggle="modal"
+                                       data-target="#mobileSubMenu1"
+                                                                           >
+
+                                        <img src="../index.html">
+                                        <span> Accessories </span>
+                                                                                    <i class='bx bx-chevron-right'></i>
+                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a href="../category/special-occasions.html" class="navigation-item"
+
+                                                                           >
+
+                                        <img src="../index.html">
+                                        <span> Special Occasions </span>
+                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a href="../category/prom-dresses.html" class="navigation-item"
+
+                                                                           >
+
+                                        <img src="../index.html">
+                                        <span> Prom Dresses </span>
+                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a href="../category/wedding-party.html" class="navigation-item"
+
+                                                                              data-toggle="modal"
+                                       data-target="#mobileSubMenu4"
+                                                                           >
+
+                                        <img src="../index.html">
+                                        <span> Wedding Party </span>
+                                                                                    <i class='bx bx-chevron-right'></i>
+                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a href="../category/wedding-dress.html" class="navigation-item"
+
+                                                                           >
+
+                                        <img src="../index.html">
+                                        <span> Wedding Dress </span>
+                                                                            </a>
+                                </li>
+                                                    
+                        <hr>
+
+                        <li class="accordion">
+                            <a class="accordion-item">
+                                                                <a class="accordion-title" href="javascript:void(0)">
+                                    <img src="../frontend/assets/images/icons/USD.svg">
+                                    <span>USD</span>
+                                    <i class="bx bx-chevron-down float-right"></i>
+                                </a>
+
+                                <div class="accordion-content mt-3" style="display: none;">
+                                                                            <div class="form-check ">
+                                            <input onclick="currency_change('USD')" class="form-check-input" type="radio" name="exampleRadios"
+                                                   id="exampleRadios0" value="option2">
+                                            <label class="form-check-label" for="exampleRadios0" style="font-size: 12px;line-height: 1.5;">
+                                                US DOLLAR (USD) <img style="height: 1rem" src="../frontend/assets/img/us-flag.jpg">
+                                            </label>
+                                        </div>
+                                                                            <div class="form-check mt-2">
+                                            <input onclick="currency_change('SPA')" class="form-check-input" type="radio" name="exampleRadios"
+                                                   id="exampleRadios1" value="option2">
+                                            <label class="form-check-label" for="exampleRadios1" style="font-size: 12px;line-height: 1.5;">
+                                                SPAIN EURO (SPA) <img style="height: 1rem" src="../frontend/assets/img/spain-flag.jpg">
+                                            </label>
+                                        </div>
+                                                                            <div class="form-check mt-2">
+                                            <input onclick="currency_change('RUS')" class="form-check-input" type="radio" name="exampleRadios"
+                                                   id="exampleRadios2" value="option2">
+                                            <label class="form-check-label" for="exampleRadios2" style="font-size: 12px;line-height: 1.5;">
+                                                RUSSIAN RUBLE (RUS) <img style="height: 1rem" src="../frontend/assets/img/russia-flag.jpg">
+                                            </label>
+                                        </div>
+                                                                            <div class="form-check mt-2">
+                                            <input onclick="currency_change('FRA')" class="form-check-input" type="radio" name="exampleRadios"
+                                                   id="exampleRadios3" value="option2">
+                                            <label class="form-check-label" for="exampleRadios3" style="font-size: 12px;line-height: 1.5;">
+                                                FRANCE EURO (FRA) <img style="height: 1rem" src="../frontend/assets/img/france-flag.jpg">
+                                            </label>
+                                        </div>
+                                    
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)" class="navigation-item" data-toggle="modal" data-target="#onlineHelpModal">
+                                <img src="../frontend/assets/images/icons/information.svg">
+                                <span> Online Help </span> <i class='bx bx-chevron-right'></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----====== Mobile Sidebar Menu Starts======-->
+
+<!----====== Mobile Sidebar Sub-Menu Starts======-->
+                                                <div class="modal left fade mobileMenuModal mobile-submenu show" id="mobileSubMenu1" tabindex="-1" role="dialog" aria-modal="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="menu-title d-flex align-items-center">
+                                    <a href="javascript:void(0)" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class='bx bx-arrow-back bx-tada'></i>
+                                    </a>
+                                    <h6><a href="../category/accessories.html">Accessories</a></h6>
+                                </div>
+                                                                    <ul class="sub-menu mt-4">
+                                                                                    <li>
+                                                <a href="../category/bridesmaid-dresses.html">
+                                                    Bridesmaid Dresses
+                                                </a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="../category/men-accessories.html">
+                                                    Men Accessories
+                                                </a>
+                                            </li>
+                                                                            </ul>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                                                                            <div class="modal left fade mobileMenuModal mobile-submenu show" id="mobileSubMenu4" tabindex="-1" role="dialog" aria-modal="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="menu-title d-flex align-items-center">
+                                    <a href="javascript:void(0)" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class='bx bx-arrow-back bx-tada'></i>
+                                    </a>
+                                    <h6><a href="../category/wedding-party.html">Wedding Party</a></h6>
+                                </div>
+                                                                    <ul class="sub-menu mt-4">
+                                                                                    <li>
+                                                <a href="../category/wedding-guest-dresses.html">
+                                                    Wedding Guest Dresses
+                                                </a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="../category/flower-girls-dresses.html">
+                                                    Flower Girls Dresses
+                                                </a>
+                                            </li>
+                                                                            </ul>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                                
+
+<!----====== Mobile Sidebar Online Help Submenu Starts======-->
+<div class="modal left fade mobileMenuModal online-help show" id="onlineHelpModal" tabindex="-1" role="dialog" aria-modal="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="menu-title d-flex align-items-center">
+                    <a href="javascript:void(0)" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class='bx bx-arrow-back bx-tada'></i>
+                    </a>
+                    <h6>Online Help</h6>
+                </div>
+                <ul class="sub-menu mt-4" style="list-style: none;">
+                    <li>
+                        <a href="javascript:;" class="d-flex align-items-center">
+                            <img src="../frontend/assets/images/icons/online-chat.svg">
+                            Online Chat
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../contact-us.html" class="d-flex align-items-center">
+                            <img src="../frontend/assets/images/icons/mail.svg">
+                            Email
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:9818441226" class="d-flex align-items-center">
+                            <img src="../frontend/assets/images/icons/phone-call.svg">
+                            Tollfree Call
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../order-status.html" class="d-flex align-items-center">
+                            <img src="../frontend/assets/images/icons/order-status.svg">
+                            Order Status
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----====== Header Starts====== --->
+
+<div id="header">
+    <!-- Top Header Bar Starts -->
+<div class="top-header d-none d-lg-block">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <ul class="header-contact-info">
+                    <li class="text-uppercase">Express Delivery and Free Turns Within 20 Days</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <ul class="header-top-menu">
+                    <li>
+                        <div class="content-wrapper d-inline-block">
+                            <i class='bx bx-phone-call'></i>
+                            <span class="text-uppercase mr-1">Toll Free:</span>
+                            <a href="tel:9818441226">
+                                9818441226
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class='bx bx-time'></i>
+                        <span class=""> 9 AM - 6 PM (PDT) . MON-FRI</span>
+                    </li>
+                    <li>
+                        <a href="https://wa.link/82cdga" class="btn btn-info py-2 px-3" style="border-radius: 30px;">Buy In 49$</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Top Header Bar Ends -->
+
+<!-- Bottom Header Starts -->
+<div class="bottom-header d-none d-lg-block py-3">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 d-flex align-items-center justify-content-between">
+            
+
+                <!-- Search Form -->
+                <div class="float-right">
+                    <form class="search-form" data-toggle="validator" action="https://free.ketramart.com/search-products" method="GET">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button type="submit" class="bg-white border-0 input-group-text"> <i
+                                        class='bx bx-search'></i> </button>
+                            </div>
+                            <input name="q" type="text" class="input-search border-0 search-bar-input" placeholder="Search by product name.."
+                                   required autocomplete="off">
+                        </div>
+                        <div id="validator-search" class="form-result"></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Logo Area  -->
+            <div class="col-lg-4 text-center">
+                <a class="logo-wrapper" href="../index.html">
+                                            <img src="../backend/assets/images/logo.png" alt="logo">
+                                    </a>
+            </div>
+            <!-- Logo Area Ends -->
+
+            <!-- Right Widgets -->
+            <div class="col-lg-4">
+                <ul class="header-widgets-menu">
+                    <li class="">
+
+                    </li>
+                                            <li class="">
+                            <a href="../login.html">
+                                <img src="../frontend/assets/images/icons/login.svg" alt="Login Icon" class="img-icon">
+                                <span>Login</span>
+                            </a>
+                        </li>
+                    
+                    <li class="">
+                        <a href="../cart.html" class="cart-link" >
+                            <img src="../frontend/assets/images/icons/shoppingBag.svg" alt="Shopping Bag Icon" class="img-icon">
+                            <span class="count-badge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Right Widgets Ends-->
+
+        </div>
+    </div>
+</div>
+<!-- Bottom Header Ends -->
+</div>
+
+<div id="nav">
+    <div class="navbar-area">
+    <!-- Responsive Nav Menu for Mobile -->
+    <div class="responsive-nav">
+        <div class="container">
+            <div class="row align-items-center justify-content-center position-relative">
+                <!-- Search Form For Mobile Menu-->
+                <div class="search-container">
+                    <form action="https://free.ketramart.com/search-products" method="GET">
+                        <input type="text" name="q" id="search-terms" autocomplete="off" placeholder="Search dresses..." />
+                    </form>
+                </div>
+                <div class="col-3 col-md-3 d-flex align-items-center justify-content-between">
+                    <div class="humberger__open" data-toggle="modal" data-target="#mobileMenu">
+                        <i class="ri-menu-2-line"></i>
+
+                    </div>
+                    <div class="search-link">
+                        <a href="javascript:void(0)" class="search-toggle">
+                            <i class="ri-search-line"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-md-6 text-center">
+                    <div class="logo">
+                        <a href="../index.html">
+                                                            <img src="../frontend/assets/images/logo.html" alt="logo">
+                                                    </a>
+                    </div>
+                </div>
+                <div class="col-3 col-md-3 d-flex align-items-center justify-content-between">
+                    <a href="tel:9818441226" class="contact-link">
+                        <i class='bx bx-phone-call'></i>
+                    </a>
+                    <a href="../cart.html" class="cart-link">
+                        <img src="../frontend/assets/images/icons/shoppingBag.svg" alt="Shopping Bag Icon" class="img-icon">
+                        <span class="count-badge">0</span>
+                    </a>
+                </div>
+            </div>
+            <div class="responsive-menu d-none">
+            </div>
+        </div>
+    </div>
+    <!-- Responsive Nav Menu for Mobile Ends -->
+
+    <div class="main-nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="collapse navbar-collapse mean-menu">
+                    <ul class="navbar-nav">
+                                                                                                            <li class="nav-item">
+                                    <a href="../category/shoes.html" class="nav-link">Shoes
+                                                                            </a>
+                                                                    </li>
+                                                            <li class="nav-item">
+                                    <a href="../category/accessories.html" class="nav-link">Accessories
+                                                                                    <i class='bx bx-chevron-down'></i>
+                                                                            </a>
+                                                                        <ul class="dropdown-menu">
+                                                                                    <li class="nav-item"><a href="../category/bridesmaid-dresses.html" class="nav-link ">Bridesmaid Dresses</a>
+                                            </li>
+                                                                                    <li class="nav-item"><a href="../category/men-accessories.html" class="nav-link ">Men Accessories</a>
+                                            </li>
+                                                                            </ul>
+                                                                    </li>
+                                                            <li class="nav-item">
+                                    <a href="../category/special-occasions.html" class="nav-link">Special Occasions
+                                                                            </a>
+                                                                    </li>
+                                                            <li class="nav-item">
+                                    <a href="../category/prom-dresses.html" class="nav-link">Prom Dresses
+                                                                            </a>
+                                                                    </li>
+                                                            <li class="nav-item">
+                                    <a href="../category/wedding-party.html" class="nav-link">Wedding Party
+                                                                                    <i class='bx bx-chevron-down'></i>
+                                                                            </a>
+                                                                        <ul class="dropdown-menu">
+                                                                                    <li class="nav-item"><a href="../category/wedding-guest-dresses.html" class="nav-link ">Wedding Guest Dresses</a>
+                                            </li>
+                                                                                    <li class="nav-item"><a href="../category/flower-girls-dresses.html" class="nav-link ">Flower Girls Dresses</a>
+                                            </li>
+                                                                            </ul>
+                                                                    </li>
+                                                            <li class="nav-item">
+                                    <a href="../category/wedding-dress.html" class="nav-link">Wedding Dress
+                                                                            </a>
+                                                                    </li>
+                                                                        </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+</div>
+    <main class="main-content">
+        <div class="container">
+        <!-- BreadCrumb Section -->
+            <div class="page-title-area">
+                <div class="page-title-content">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li>VIEW ALL FEATURED PRODUCTS</li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- BreadCrumb Section Ends-->
+        </div>
+
+        <!-- Product List -->
+        <section class="products-area products-collections-area pb-70">
+            <div class="container">
+
+                <form action="#" id="search-form" method="get">
+                    <div class="row">
+                        <!-- Filter Sidebar -->
+                        <div class="col-lg-3 col-md-12">
+                            <div class="accordion widget-area" id="accordionFilter">
+                                
+                                                                <!-- Color Filters -->
+                                    <div class="accordion-item widget color-list-widget">
+                                        <div class="accordion-button active" data-toggle="collapse"
+                                             data-target="#filterColor" aria-expanded="true" aria-controls="filterColor">
+                                            <h3 class="widget-title">Color</h3>
+                                            <div class="accordion-marker"><i class="bx bx-minus"></i></div>
+                                        </div>
+                                        <ul id="filterColor" class="collapse show color-list-row"
+                                            data-parent="#accordionFilter">
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter" data-toggle="tooltip"
+                                                       data-title="White">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="5" onchange="filter()"
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #FFFFFF;"></span>
+                                                    </span>
+                                                </label>
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter" data-toggle="tooltip"
+                                                       data-title="Black">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="6" onchange="filter()"
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #000000;"></span>
+                                                    </span>
+                                                </label>
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter" data-toggle="tooltip"
+                                                       data-title="IndianRed">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="8" onchange="filter()"
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #CD5C5C;"></span>
+                                                    </span>
+                                                </label>
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter" data-toggle="tooltip"
+                                                       data-title="Salmon">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="9" onchange="filter()"
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #FA8072;"></span>
+                                                    </span>
+                                                </label>
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter" data-toggle="tooltip"
+                                                       data-title="Lavender">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="18" onchange="filter()"
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #E6E6FA;"></span>
+                                                    </span>
+                                                </label>
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter" data-toggle="tooltip"
+                                                       data-title="Green">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="24" onchange="filter()"
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #008000;"></span>
+                                                    </span>
+                                                </label>
+                                                                                    </ul>
+                                    </div>
+                                
+
+                                                                    <div class="accordion-item widget collections-list-widget">
+                                        <div class="accordion-button active" data-toggle="collapse"
+                                             data-target="#filterHemline0" aria-expanded="true"
+                                             aria-controls="filterHemline">
+                                            <h3 class="widget-title">Size</h3>
+                                            <div class="accordion-marker"><i class="bx bx-plus"></i></div>
+                                        </div>
+                                        <ul id="filterHemline0"
+                                            class="collapse show collections-list-row" data-parent="#accordionFilter">
+                                                                                            <label class="aiz-checkbox attribute-filter"
+                                                       for="attribute-1">
+                                                    <input type="checkbox" name="attribute_values[]" onchange="filter()"
+                                                           value="1" id="attribute-1"
+                                                           >
+                                                    <span class="aiz-square-check"></span>
+                                                    <span class="attribute_name">L</span>
+                                                </label>
+                                                                                            <label class="aiz-checkbox attribute-filter"
+                                                       for="attribute-2">
+                                                    <input type="checkbox" name="attribute_values[]" onchange="filter()"
+                                                           value="2" id="attribute-2"
+                                                           >
+                                                    <span class="aiz-square-check"></span>
+                                                    <span class="attribute_name">S</span>
+                                                </label>
+                                                                                            <label class="aiz-checkbox attribute-filter"
+                                                       for="attribute-3">
+                                                    <input type="checkbox" name="attribute_values[]" onchange="filter()"
+                                                           value="3" id="attribute-3"
+                                                           >
+                                                    <span class="aiz-square-check"></span>
+                                                    <span class="attribute_name">M</span>
+                                                </label>
+                                                                                            <label class="aiz-checkbox attribute-filter"
+                                                       for="attribute-4">
+                                                    <input type="checkbox" name="attribute_values[]" onchange="filter()"
+                                                           value="4" id="attribute-4"
+                                                           >
+                                                    <span class="aiz-square-check"></span>
+                                                    <span class="attribute_name">XL</span>
+                                                </label>
+                                                                                            <label class="aiz-checkbox attribute-filter"
+                                                       for="attribute-7">
+                                                    <input type="checkbox" name="attribute_values[]" onchange="filter()"
+                                                           value="7" id="attribute-7"
+                                                           >
+                                                    <span class="aiz-square-check"></span>
+                                                    <span class="attribute_name">XS</span>
+                                                </label>
+                                                                                    </ul>
+                                    </div>
+                            
+                            <!-- Price Filter -->
+                                <div class="accordion-item widget price-list-widget">
+                                    <div class="accordion-button active" data-toggle="collapse" data-target="#filterPrice"
+                                         aria-expanded="true" aria-controls="filterPrice">
+                                        <h3 class="widget-title">Price</h3>
+                                        <div class="accordion-marker"><i class="bx bx-minus"></i></div>
+                                    </div>
+                                    <div id="filterPrice" class="collapse show collection-filter-by-price">
+                                        <div class="aiz-range-slider">
+                                            <div id="input-slider-range"
+                                                 data-range-value-min=" 100.00 "
+                                                 data-range-value-max=" 1200.00 ">
+                                            </div>
+
+                                            <div class="row mt-4 mx-1">
+                                                <div class="col-6">
+                                                    <div class="price-box">
+                                                        <span class="range-slider-value value-low fs-14 fw-600 opacity-70"
+                                                                                                                            data-range-value-low="0"                                                               id="input-slider-range-value-low"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="price-box">
+                                                        <span class="range-slider-value value-high fs-14 fw-600 opacity-70"
+                                                                                                                            data-range-value-high="1200.00"
+                                                                                                                            id="input-slider-range-value-high"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" name="min_price"
+                                                   value="">
+                                            <input type="hidden" name="max_price"
+                                                   value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Filter Sidebar Ends-->
+                        <div class="col-lg-9 col-md-12">
+                            <div class="products-filter-options">
+                                <div class="row align-items-center mt-2">
+                                    <div class="col-6 col-lg-6 col-md-6">
+                                        <div class="products-ordering-list product-page-per-view">
+                                            <select name="sortBy" id="" class="form-control">
+                                                <option value="">Default Sorting</option>
+                                                <option value="a-z" >Sort by A - Z Order</option>
+                                                <option value="z-a"  >Sort by Z - A Order</option>
+                                                <option value="latest"  >Sort by Latest</option>
+                                                <option value="oldest" >Sort by Oldest</option>
+                                                <option value="low-high" >Sort by Price: Low to High</option>
+                                                <option value="high-low" >Sort by Price: High to Low</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 float-right">
+                                        <div class="d-lg-flex d-md-flex d-none align-items-center justify-content-end ">
+                                            <p class="product-page-per-view">Select
+                                                <select  id="" name="per_page">
+                                                    <option value="9" >9</option>
+                                                    <option value="18" selected>18</option>
+                                                    <option value="27" >27</option>
+                                                    <option value="36" >36</option>
+                                                    <option value="45" >45</option>
+                                                </select>
+                                                of 7
+                                            </p>
+                                        </div>
+                                        <span class="d-flex  align-items-center justify-content-end  sub-title d-lg-none"><a href="javascript:void(0)"
+                                                                             data-toggle="modal" data-target="#productsFilterModal"><i
+                                                    class='bx bx-filter-alt'></i>
+                                                    Filter</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop_wrapper">
+                                <div id="products-collections-filter" class="">
+                                    <section class="products-area">
+                                        <div class="row">
+                                                                                            <div class="col-6 col-md-4" id="products-view-filter0">
+                                                    <div class="item">
+    <div class="single-products-box">
+        <div class="products-image">
+                        <a href="../product-detail/off-the-shoulder-long-sleeve-lace-draped-gown.html">
+                                    <div
+                        class="
+                                    new-tag                     ">
+                        new
+                    </div>
+                                <img style="border:1px solid #ddd"
+                    src="../../ketramart.com/storage/images/products/00yHm-1674897673.jpg"
+                    class="main-image" alt="image">
+
+                <img style="border:1px solid #ddd"
+                    src="../../ketramart.com/storage/images/products/cUMW4-1674897673.jpg"
+                    class="hover-image" alt="image">
+            </a>
+        </div>
+        <div class="products-content">
+            <div class="wishlist-btn">
+                <a href="javascript:;" class="add_to_wishlist" data-product-id="4"
+                    id="add_to_wishlist_4">
+                                                                <i class='bx bxs-heart wishlist-icon'></i>
+                                    </a>
+            </div>
+            <h3><a href="../product-detail/off-the-shoulder-long-sleeve-lace-draped-gown.html">Off-the-shoulder long sleeve lace draped gown</a></h3>
+            <div class="price">
+                                    <span class="new-price">$180.00</span>
+                    <span class="old-price">$200.00</span>
+                            </div>
+            <div class="star-rating d-none">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+        </div>
+    </div>
+</div>
+                                                </div>
+
+                                                                                            <div class="col-6 col-md-4" id="products-view-filter1">
+                                                    <div class="item">
+    <div class="single-products-box">
+        <div class="products-image">
+                        <a href="../product-detail/satin-v-neck-tea-length-a-line-dress.html">
+                                    <div
+                        class="
+                 hot-tag
+                                       ">
+                        hot
+                    </div>
+                                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/Cksm9-1674898401.jpg"
+                    class="main-image" alt="image">
+
+                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/2yEV9-1674898401.jpg"
+                    class="hover-image" alt="image">
+            </a>
+        </div>
+        <div class="products-content">
+            <div class="wishlist-btn">
+                <a href="javascript:;" class="add_to_wishlist" data-product-id="5"
+                    id="add_to_wishlist_5">
+                                                                <i class='bx bxs-heart wishlist-icon'></i>
+                                    </a>
+            </div>
+            <h3><a href="../product-detail/satin-v-neck-tea-length-a-line-dress.html">Satin v-neck tea length a-line dress</a></h3>
+            <div class="price">
+                                    <span class="new-price">$332.50</span>
+                    <span class="old-price">$350.00</span>
+                            </div>
+            <div class="star-rating d-none">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+        </div>
+    </div>
+</div>
+                                                </div>
+
+                                                                                            <div class="col-6 col-md-4" id="products-view-filter2">
+                                                    <div class="item">
+    <div class="single-products-box">
+        <div class="products-image">
+                        <a href="../product-detail/one-shoulder-crinkle-chiffon-bridesmaid-dress.html">
+                                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/9BMNa-1674900410.jpg"
+                    class="main-image" alt="image">
+
+                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/eKMTa-1674900409.jpg"
+                    class="hover-image" alt="image">
+            </a>
+        </div>
+        <div class="products-content">
+            <div class="wishlist-btn">
+                <a href="javascript:;" class="add_to_wishlist" data-product-id="7"
+                    id="add_to_wishlist_7">
+                                                                <i class='bx bxs-heart wishlist-icon'></i>
+                                    </a>
+            </div>
+            <h3><a href="../product-detail/one-shoulder-crinkle-chiffon-bridesmaid-dress.html">One-shoulder crinkle chiffon bridesmaid dress</a></h3>
+            <div class="price">
+                                    <span class="new-price">$125.00</span>
+                    <span class="old-price">$150.00</span>
+                            </div>
+            <div class="star-rating d-none">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+        </div>
+    </div>
+</div>
+                                                </div>
+
+                                                                                            <div class="col-6 col-md-4" id="products-view-filter3">
+                                                    <div class="item">
+    <div class="single-products-box">
+        <div class="products-image">
+                        <a href="../product-detail/chiffon-midi-cowl-neck-bridesmaid-dress.html">
+                                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/IXiyW-1674900900.jpg"
+                    class="main-image" alt="image">
+
+                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/iP34X-1674900901.jpg"
+                    class="hover-image" alt="image">
+            </a>
+        </div>
+        <div class="products-content">
+            <div class="wishlist-btn">
+                <a href="javascript:;" class="add_to_wishlist" data-product-id="8"
+                    id="add_to_wishlist_8">
+                                                                <i class='bx bxs-heart wishlist-icon'></i>
+                                    </a>
+            </div>
+            <h3><a href="../product-detail/chiffon-midi-cowl-neck-bridesmaid-dress.html">Chiffon midi cowl neck bridesmaid dress</a></h3>
+            <div class="price">
+                                    <span class="equal-price">$100.00</span>
+                            </div>
+            <div class="star-rating d-none">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+        </div>
+    </div>
+</div>
+                                                </div>
+
+                                                                                            <div class="col-6 col-md-4" id="products-view-filter4">
+                                                    <div class="item">
+    <div class="single-products-box">
+        <div class="products-image">
+                        <a href="../product-detail/rhinestone-cowboy-boots.html">
+                                    <div
+                        class="
+                                    new-tag                     ">
+                        new
+                    </div>
+                                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/DDKRP-1674902145.jpg"
+                    class="main-image" alt="image">
+
+                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/rVcNg-1674902145.jpg"
+                    class="hover-image" alt="image">
+            </a>
+        </div>
+        <div class="products-content">
+            <div class="wishlist-btn">
+                <a href="javascript:;" class="add_to_wishlist" data-product-id="13"
+                    id="add_to_wishlist_13">
+                                                                <i class='bx bxs-heart wishlist-icon'></i>
+                                    </a>
+            </div>
+            <h3><a href="../product-detail/rhinestone-cowboy-boots.html">Rhinestone cowboy boots</a></h3>
+            <div class="price">
+                                    <span class="equal-price">$250.00</span>
+                            </div>
+            <div class="star-rating d-none">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+        </div>
+    </div>
+</div>
+                                                </div>
+
+                                                                                            <div class="col-6 col-md-4" id="products-view-filter5">
+                                                    <div class="item">
+    <div class="single-products-box">
+        <div class="products-image">
+                        <a href="../product-detail/allover-sequin-v-neck-sheath-gown-with-slit.html">
+                                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/DOjXf-1674902825.jpg"
+                    class="main-image" alt="image">
+
+                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/9OHjT-1674902826.jpg"
+                    class="hover-image" alt="image">
+            </a>
+        </div>
+        <div class="products-content">
+            <div class="wishlist-btn">
+                <a href="javascript:;" class="add_to_wishlist" data-product-id="15"
+                    id="add_to_wishlist_15">
+                                                                <i class='bx bxs-heart wishlist-icon'></i>
+                                    </a>
+            </div>
+            <h3><a href="../product-detail/allover-sequin-v-neck-sheath-gown-with-slit.html">Allover sequin v-neck sheath gown with slit</a></h3>
+            <div class="price">
+                                    <span class="equal-price">$109.95</span>
+                            </div>
+            <div class="star-rating d-none">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+        </div>
+    </div>
+</div>
+                                                </div>
+
+                                                                                            <div class="col-6 col-md-4" id="products-view-filter6">
+                                                    <div class="item">
+    <div class="single-products-box">
+        <div class="products-image">
+                        <a href="../product-detail/one-shoulder-fringe-trimmed-crepe-sheath.html">
+                                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/5J25L-1674902942.jpg"
+                    class="main-image" alt="image">
+
+                <img style="border:1px solid #ddd"
+                    src="../storage/images/products/SGRwc-1674902942.jpg"
+                    class="hover-image" alt="image">
+            </a>
+        </div>
+        <div class="products-content">
+            <div class="wishlist-btn">
+                <a href="javascript:;" class="add_to_wishlist" data-product-id="16"
+                    id="add_to_wishlist_16">
+                                                                <i class='bx bxs-heart wishlist-icon'></i>
+                                    </a>
+            </div>
+            <h3><a href="../product-detail/one-shoulder-fringe-trimmed-crepe-sheath.html">One-shoulder fringe trimmed crepe sheath</a></h3>
+            <div class="price">
+                                    <span class="equal-price">$149.95</span>
+                            </div>
+            <div class="star-rating d-none">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+        </div>
+    </div>
+</div>
+                                                </div>
+
+                                            
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="pagination-area d-flex align-items-center justify-content-between">
+                                    <!-- Shop Pagination Area -->
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Product List Ends-->
+
+        
+        <div class="modal full fade productsFilterModal show" id="productsFilterModal" tabindex="-1" role="dialog"
+             aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <form action="#" id="search-form-mobile" method="get">
+                    <div class="modal-content">
+                        <div class="col-12 d-flex align-items-center justify-content-between p-0">
+                            <h6 class="widget-title m-0">Filter</h6>
+                            <div class="buttons d-flex align-items-center justify-content-end w-100">
+                                <a href="featured.html" type="button" class="mr-2 btn btn-outline btn-clear"
+                                   style="font-size: 10px;
+                                        width: fit-content;
+                                        height: 2rem;">
+                                    <span aria-hidden="true">Clear All</span>
+                                </a>
+                                <button type="submit" class="btn secondary-btn sign-up-btn">
+                                    <span aria-hidden="true"><i class='bx bx-check bx-flashing'></i> Done</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="accordion widget-area" id="accordionFilter">
+                                <div class="widget filter-list-widget">
+                                
+                                <!-- Selected Filters -->
+                                    
+                                </div>
+
+                                
+                                    <div class="accordion-item widget color-list-widget">
+                                        <div class="accordion-button active" data-toggle="collapse"
+                                             data-target="#filterColorMobile" aria-expanded="true"
+                                             aria-controls="filterColorMobile">
+                                            <h3 class="widget-title">Color</h3>
+                                            <div class="accordion-marker"><i class="bx bx-minus"></i></div>
+                                        </div>
+                                        <ul id="filterColorMobile" class="collapse show color-list-row"
+                                            data-parent="#accordionFilter">
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter"
+                                                       data-title="White">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="5" 
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #FFFFFF;"></span>
+                                                    </span>
+                                                </label>
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter"
+                                                       data-title="Black">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="6" 
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #000000;"></span>
+                                                    </span>
+                                                </label>
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter"
+                                                       data-title="IndianRed">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="8" 
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #CD5C5C;"></span>
+                                                    </span>
+                                                </label>
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter"
+                                                       data-title="Salmon">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="9" 
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #FA8072;"></span>
+                                                    </span>
+                                                </label>
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter"
+                                                       data-title="Lavender">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="18" 
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #E6E6FA;"></span>
+                                                    </span>
+                                                </label>
+                                                                                            <label class="aiz-megabox pl-0 mr-2 attribute-filter"
+                                                       data-title="Green">
+                                                    <input type="checkbox" name="attribute_values[]"
+                                                           value="24" 
+                                                           >
+                                                    <span
+                                                        class="aiz-megabox-elem d-flex align-items-center justify-content-center mb-2">
+                                                        <span class="size-30px d-inline-block"
+                                                              style="border-radius:50%;background: #008000;"></span>
+                                                    </span>
+                                                </label>
+                                                                                    </ul>
+                                    </div>
+
+                                
+
+                                                                    <div class="accordion-item widget collections-list-widget active">
+                                        <div class="accordion-button" data-toggle="collapse"
+                                             data-target="#filterAttributeMobile0" aria-expanded="true"
+                                             aria-controls="filterHemlineMobile">
+                                            <h3 class="widget-title">Size</h3>
+                                            <div class="accordion-marker"><i class="bx bx-minus"></i></div>
+                                        </div>
+                                        <div id="filterAttributeMobile0" class="collapse show ">
+                                            <ul class="collections-list-row" data-parent="#accordionFilter">
+                                                                                                    <label class="aiz-mobile-checkbox attribute-filter"
+                                                           for="attribute-mobile-1">
+                                                        <input type="checkbox" name="attribute_values[]"
+                                                               value="1"
+                                                               id="attribute-mobile-1"
+                                                               
+                                                               >
+                                                        <span class="aiz-square-mobile-check"></span>
+                                                        <span class="attribute_name">L</span>
+                                                    </label>
+                                                                                                    <label class="aiz-mobile-checkbox attribute-filter"
+                                                           for="attribute-mobile-2">
+                                                        <input type="checkbox" name="attribute_values[]"
+                                                               value="2"
+                                                               id="attribute-mobile-2"
+                                                               
+                                                               >
+                                                        <span class="aiz-square-mobile-check"></span>
+                                                        <span class="attribute_name">S</span>
+                                                    </label>
+                                                                                                    <label class="aiz-mobile-checkbox attribute-filter"
+                                                           for="attribute-mobile-3">
+                                                        <input type="checkbox" name="attribute_values[]"
+                                                               value="3"
+                                                               id="attribute-mobile-3"
+                                                               
+                                                               >
+                                                        <span class="aiz-square-mobile-check"></span>
+                                                        <span class="attribute_name">M</span>
+                                                    </label>
+                                                                                                    <label class="aiz-mobile-checkbox attribute-filter"
+                                                           for="attribute-mobile-4">
+                                                        <input type="checkbox" name="attribute_values[]"
+                                                               value="4"
+                                                               id="attribute-mobile-4"
+                                                               
+                                                               >
+                                                        <span class="aiz-square-mobile-check"></span>
+                                                        <span class="attribute_name">XL</span>
+                                                    </label>
+                                                                                                    <label class="aiz-mobile-checkbox attribute-filter"
+                                                           for="attribute-mobile-7">
+                                                        <input type="checkbox" name="attribute_values[]"
+                                                               value="7"
+                                                               id="attribute-mobile-7"
+                                                               
+                                                               >
+                                                        <span class="aiz-square-mobile-check"></span>
+                                                        <span class="attribute_name">XS</span>
+                                                    </label>
+                                                                                            </ul>
+                                        </div>
+
+                                    </div>
+                                                        <!-- Price Filter -->
+                                <div class="accordion-item widget price-list-widget">
+                                    <div class="accordion-button" data-toggle="collapse" data-target="#filterMobilePrice"
+                                         aria-expanded="true" aria-controls="filterMobilePrice">
+                                        <h3 class="widget-title">Price</h3>
+                                        <div class="accordion-marker"><i class="bx bx-minus"></i></div>
+                                    </div>
+                                    <div id="filterMobilePrice" class="collapse show collection-filter-by-price">
+                                        <div class="aiz-range-slider-mobile">
+                                            <div id="input-slider-range-mobile"
+                                                 data-range-value-min-mobile=" 100.00 "
+                                                 data-range-value-max-mobile=" 1200.00 ">
+                                            </div>
+
+                                            <div class="row mt-4 mx-1">
+                                                <div class="col-6 price-box">
+                                                    <span class="range-slider-value value-low fs-14 fw-600 opacity-70"
+                                                                                                                    data-range-value-low-mobile="0"                                                           id="input-slider-range-value-low-mobile"></span>
+                                                </div>
+                                                <div class="col-6 price-box">
+                                                    <span class="range-slider-value value-high fs-14 fw-600 opacity-70"
+                                                                                                                    data-range-value-high-mobile="1200.00"
+                                                                                                                    id="input-slider-range-value-high-mobile"></span>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" class="min_price" name="min_price"
+                                                   value="">
+                                            <input type="hidden" class="max_price" name="max_price"
+                                                   value="">
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+<div class="modal fade add-to-cart-modal" id="addedToCart">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-zoom product-modal" id="modal-size" role="document">
+        <div class="modal-content position-relative m-3">
+            <div class="c-preloader text-center">
+                <i class="las la-spinner la-spin la-3x"></i>
+            </div>
+            <button type="button" class="close absolute-top-right btn-icon close z-1" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="bx bx-x"></span>
+            </button>
+            <div id="addToCart-modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Starts -->
+<footer class="footer-area">
+    <div class="footer-menu-area py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 d-block d-md-none">
+                    <div class="single-footer-widget footer-contact">
+                        <ul class="social-link">
+                            <li><a href="https://facebook.com/" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                            <li><a href="https://twitter.com/" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                            <li><a href="https://instagram.com/" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            </li>
+                            <li><a href="https://youtube.com/" class="d-block" target="_blank"><i class='bx bxl-youtube'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="single-footer-widget">
+                        <a class="logo-wrapper d-none d-md-block" href="../index.html">
+                                                            <img src="../frontend/assets/images/logo.png" alt="logo">
+                                                    </a>
+                        <h6 class="d-none d-md-flex font-weight-bold mt-5">Subscribe</h6>
+                        <h6 class="d-flex d-md-none font-weight-bold mt-5">Subscribe Newsletter</h6>
+                        <div class="footer-newsletter-box mt-3">
+
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control input-newsletter"
+                                       placeholder="Enter Your Email" name="s_email" required autocomplete="off">
+                                <div class="input-group-prepend">
+                                    <button type="button" class="input-group-text subscribe-btn"> <i
+                                            class='bx bx-right-arrow-alt'></i> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="single-footer-widget pl-4 footer__about-us">
+                        <h3>About Us</h3>
+                        <div class="d-flex align-items-center">
+                            <ul class="customer-support">
+                                <li><a href="../about-us.html">About KETRA MART FREE</a></li>
+                                <li><a href="../return-policy.html">Return Policy</a></li>
+                                <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="../terms-conditions.html">Terms and Conditions</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 d-none d-md-block">
+                    <div class="single-footer-widget footer-customer-center">
+                        <h3>Customer Center</h3>
+                        <ul class="customer-support">
+                            <li><a href="../contact-us.html" class="d-inline-block d-none">Contact Us</a></li>
+                            <li><a href="../order-status.html">Track Your Order</a></li>
+                            <li><a href="../contact-us.html" class="d-md-none d-inline-block">Contact us</a></li>
+                            <li><a href="../cancellation-policy.html">Cancellation Policy</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../shipping-payment.html">Shipping & Payment</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-none d-md-block">
+                    <div class="single-footer-widget footer-contact">
+                        <h3>Contact Us</h3>
+                        <ul class="footer-contact-info">
+                            <li class="d-flex"><i class='bx bx-phone-call pr-1'></i>
+                                <p >
+                                    <span>9818441226</span>
+                                    <small>(toll free)</small>
+                                </p>
+                            </li>
+                        </ul>
+                        <ul class="footer-contact-info">
+                            <li class="d-flex">
+                                <i class='bx bx-envelope pr-1'></i>
+                                <p>
+                                    <span>info@ketramart.com</span>
+                                </p>
+                            </li>
+                        </ul>
+                        <ul class="footer-contact-info">
+                            <li class="d-flex">
+                                <i class='bx bx-map pr-1'></i>
+                                <p>
+                                    <span>Kadaghari, Nepal</span>
+                                </p>
+                            </li>
+                        </ul>
+                        <h6 class="font-weight-bold mt-4">Follow us</h6>
+                        <ul class="social-link">
+                            <li><a href="https://facebook.com/" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                            <li><a href="https://twitter.com/" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                            <li><a href="https://instagram.com/" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            </li>
+                            <li><a href="https://youtube.com/" class="d-block" target="_blank"><i class='bx bxl-youtube'></i></a></li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 col-md-12">
+                    <ul class="payment-types">
+                        <li><a href="javascript:;" ><img width="100px" src="../frontend/assets/images/payments/paypal.svg" alt="image"></a>
+                        </li>
+                        <li><a href="javascript:;" ><img width="100px" src="../frontend/assets/images/payments/stripe.svg" alt="image"></a>
+                        </li>
+                        <li><a href="javascript:;" ><img width="100px" src="../frontend/assets/images/payments/razor.png"
+                                                             alt="image"></a></li>
+                        <li><a href="javascript:;" ><img width="100px" src="../frontend/assets/images/payments/cod.jpg"
+                                                             alt="image"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>© Copyrights 2023. All rights reserved. </p>
+    </div>
+</footer>
+
+
+<!-- Footer Ends -->
+<div class="js-cookie-consent cookie-consent">
+
+    <span class="cookie-consent__message">
+        Your experience on this site will be improved by allowing cookies.
+    </span>
+
+    <button class="js-cookie-consent-agree cookie-consent__agree btn btn-danger">
+        Ok. I Understood
+    </button>
+
+</div>
+
+    <script>
+
+        window.laravelCookieConsent = (function () {
+
+            const COOKIE_VALUE = 1;
+            const COOKIE_DOMAIN = 'free.ketramart.com';
+
+            function consentWithCookies() {
+                setCookie('laravel_cookie_consent', COOKIE_VALUE, 7300);
+                hideCookieDialog();
+            }
+
+            function cookieExists(name) {
+                return (document.cookie.split('; ').indexOf(name + '=' + COOKIE_VALUE) !== -1);
+            }
+
+            function hideCookieDialog() {
+                const dialogs = document.getElementsByClassName('js-cookie-consent');
+
+                for (let i = 0; i < dialogs.length; ++i) {
+                    dialogs[i].style.display = 'none';
+                }
+            }
+
+            function setCookie(name, value, expirationInDays) {
+                const date = new Date();
+                date.setTime(date.getTime() + (expirationInDays * 24 * 60 * 60 * 1000));
+                document.cookie = name + '=' + value
+                    + ';expires=' + date.toUTCString()
+                    + ';domain=' + COOKIE_DOMAIN
+                    + ';path=/'
+                    + ';samesite=lax';
+            }
+
+            if (cookieExists('laravel_cookie_consent')) {
+                hideCookieDialog();
+            }
+
+            const buttons = document.getElementsByClassName('js-cookie-consent-agree');
+
+            for (let i = 0; i < buttons.length; ++i) {
+                buttons[i].addEventListener('click', consentWithCookies);
+            }
+
+            return {
+                consentWithCookies: consentWithCookies,
+                hideCookieDialog: hideCookieDialog
+            };
+        })();
+    </script>
+
+
+
+
+<div class="go-top"><i class="bx bx-chevron-up"></i></div>
+
+<!-- CDN Links -->
+<script src="../frontend/assets/js/jquery.min.js"></script>
+
+<script src="../../cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+<script src="../frontend/assets/js/popper.min.js"></script>
+<script src="../frontend/assets/js/bootstrap.min.js"></script>
+<script src="../frontend/assets/js/owl.carousel.min.js"></script>
+<script src="../frontend/assets/js/magnific-popup.min.js"></script>
+
+<script src="../frontend/assets/js/bootstrap-notify.js"></script>
+
+<script src="../frontend/assets/js/parallax.min.js"></script>
+<script src="../frontend/assets/js/rangeSlider.min.js"></script>
+<script src="../frontend/assets/js/nice-select.min.js"></script>
+<script src="../frontend/assets/js/meanmenu.min.js"></script>
+<script src="../frontend/assets/js/isotope.pkgd.min.js"></script>
+<script src="../frontend/assets/js/slick.min.js"></script>
+<script src="../frontend/assets/js/sticky-sidebar.min.js"></script>
+<script src="../frontend/assets/js/wow.min.js"></script>
+
+
+<script src="../frontend/assets/js/ajaxchimp.min.js"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.0.0/nouislider.min.js" integrity="sha512-6vo59lZMHB6GgEySnojEnfhnugP7LR4qm6akxptNOw/KW+i9o9MK4Gaia8f/eJATjAzCkgN3CWlIHWbVi2twpg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="../frontend/assets/js/main.js"></script>
+
+<script src="../frontend/assets/javascript/main.js"></script>
+<script src="../frontend/assets/javascript/accordion.js"></script>
+<script src="../frontend/assets/javascript/slickSlider.js"></script>
+
+<script src="../frontend/assets/select2/js/select2.min.js"></script>
+
+
+<script src="../js/share.js"></script>
+
+
+
+
+    <script>
+
+        function filter() {
+            $("#search-form").submit();
+        }
+        function mobileFilter() {
+            $("#search-form-mobile").submit();
+        }
+        //Desktop price slider
+        if ($(".aiz-range-slider")[0]) {
+            $(".aiz-range-slider").each(function() {
+                var c = document.getElementById("input-slider-range"),
+                    d = document.getElementById("input-slider-range-value-low"),
+                    e = document.getElementById("input-slider-range-value-high"),
+                    f = [d, e];
+
+                noUiSlider.create(c, {
+                    start: [
+                        parseInt(d.getAttribute("data-range-value-low")),
+                        parseInt(e.getAttribute("data-range-value-high")),
+                    ],
+                    connect: !0,
+                    range: {
+                        min: 0,
+                        max: parseInt(c.getAttribute("data-range-value-max")),
+                    },
+                }),
+
+                    c.noUiSlider.on("update", function(a, b) {
+                        f[b].textContent = a[b];
+                    }),
+                    c.noUiSlider.on("change", function(a, b) {
+                        rangefilter(a);
+                    });
+            });
+        }
+
+        function rangefilter(arg) {
+            $('input[name=min_price]').val(arg[0]);
+            $('input[name=max_price]').val(arg[1]);
+            filter();
+        }
+
+        //Mobile Price Slider
+        if ($(".aiz-range-slider-mobile")[0]) {
+            $(".aiz-range-slider-mobile").each(function() {
+                var c = document.getElementById("input-slider-range-mobile"),
+                    d = document.getElementById("input-slider-range-value-low-mobile"),
+                    e = document.getElementById("input-slider-range-value-high-mobile"),
+                    f = [d, e];
+
+                noUiSlider.create(c, {
+                    start: [
+                        parseInt(d.getAttribute("data-range-value-low-mobile")),
+                        parseInt(e.getAttribute("data-range-value-high-mobile")),
+                    ],
+                    connect: !0,
+                    range: {
+                        min: 0,
+                        max: parseInt(c.getAttribute("data-range-value-max-mobile")),
+                    },
+                }),
+
+                    c.noUiSlider.on("update", function(a, b) {
+                        f[b].textContent = a[b];
+                    }),
+                    c.noUiSlider.on("change", function(a, b) {
+                        rangefilterMobile(a);
+                    });
+            });
+        }
+
+        function rangefilterMobile(arg) {
+            $('.min_price').val(arg[0]);
+            $('.max_price').val(arg[1]);
+            // mobileFilter();
+        }
+        $(document).on('change', '.product-page-per-view select', function(){
+            var perpage = $('select[name=per_page]').val();
+
+            var sortBy = $('select[name=sortBy]').val();
+
+            getFilteredData(perpage,sortBy);
+        });
+
+
+        function getFilteredData(perpage=`18`,sortBy=`latest`, min = null, max = null,){
+            $("#overlay, #overlay2").fadeIn(300);
+            $.ajax({
+                url: "https://free.ketramart.com/product-filter",
+                method: "get",
+                data: {'perpage':perpage,'sortBy':sortBy,'searched_value':"", 'min_price': min,
+                    'max_price': max,},
+                beforeSend:function(){
+                    $('.loading').show();
+                },
+                complete:function(){
+                    $('.loading').hide();
+                },
+                success: function(result){
+                    $('.ajax-preloader').addClass('d-none');
+                    $('.shop_wrapper').html(result);
+
+                }
+            }).done(function() {
+                setTimeout(function(){
+                    $("#overlay, #overlay2").fadeOut(300);
+                },500);
+            });
+        }
+    </script>
+
+<script>
+    function currency_change(currency_code) {
+        $.ajax({
+            type: 'POST',
+            url: 'https://free.ketramart.com/currency',
+            data: {
+                _token:"X69ktPMiHXiqIJo9Mmm4utUUKdgjn02TrQd6qp2T",
+                currency_code: currency_code
+            },
+            beforeSend:function () {
+
+                $('#loading').show();
+            },
+            complete:function () {
+                $('#loading').hide();
+            },
+            success: function (response) {
+                if(response['status']){
+                    location.reload();
+
+                }
+                else{
+                    alert('Opps!');
+                }
+            }
+        });
+    }
+</script>
+
+
+
+<script>
+    $(window).on("scroll", function () {
+        var scrolled = $(window).scrollTop();
+        if (scrolled > 300) $(".go-top").addClass("active");
+        if (scrolled < 300) $(".go-top").removeClass("active");
+    });
+    $(".go-top").on("click", function () {
+        $("html, body").animate({ scrollTop: "0" }, 500);
+        console.log('top');
+    });
+</script>
+
+<script>
+    if (window.location.hash == "#_=_"){
+        window.location.href = "";
+    }
+</script>
+
+<script>
+    $('.add_to_wishlist').click(function () {
+        var product_id=$(this).data('product-id');
+        var token="X69ktPMiHXiqIJo9Mmm4utUUKdgjn02TrQd6qp2T";
+        var url="../wishlist/store.html";
+        // alert(product_id);
+        $.ajax({
+            url:url,
+            dataType:"JSON",
+            type:"POST",
+            data:{
+                _token:token,
+                product_id:product_id,
+            },
+            beforeSend:function () {
+
+                $('#loading').show();
+            },
+            complete:function () {
+
+                $('#loading').hide();
+
+            },
+            success:function (response) {
+
+
+                if(response.status==true){
+                    $.notify({
+                        title:'<strong>Success: </strong>',
+                        message:response['msg'],
+                    },{
+                        type: 'info',
+                        allow_dismiss: false,
+                        delay: 2800,
+                        animate: {
+                            enter: 'animated flipInY',
+                            exit: 'animated flipOutX'
+                        },
+                        onShow: function() {
+                            this.css({'width':'auto','height':'auto'});
+                        },
+                    });
+                    $('#add_to_wishlist_'+product_id).html(' <i class="bx bxs-heart wishlist-icon" style="color:#FF757B"></i>')
+
+
+                }
+                else if(response.status=='present'){
+                    $.notify({
+                        title:'<strong>Oops: </strong>',
+                        message:response['msg'],
+                    },{
+                        type: 'warning',
+                        allow_dismiss: false,
+                        delay: 2800,
+                        animate: {
+                            enter: 'animated flipInY',
+                            exit: 'animated flipOutX'
+                        },
+                        onShow: function() {
+                            this.css({'width':'auto','height':'auto'});
+                        },
+                    })
+
+                }
+                else{
+                    $.notify({
+                        title:'<strong>Sorry: </strong>',
+                        message:response['msg'],
+                    },{
+                        type: 'danger',
+                        allow_dismiss: false,
+                        delay: 2800,
+                        animate: {
+                            enter: 'animated flipInY',
+                            exit: 'animated flipOutX'
+                        },
+                        onShow: function() {
+                            this.css({'width':'auto','height':'auto'});
+                        },
+                    })
+
+                }
+            }
+        })
+
+    })
+</script>
+<script>
+    </script>
+
+
+
+</body>
+
+
+
+</html>
